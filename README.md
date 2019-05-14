@@ -1,5 +1,5 @@
 # Jquery-Clicker
-Simple jquery clicker
+Jquery clicker and my first "real" javascript project
 
 <h3>DEMO: https://innprogress.github.io/Jquery-Clicker/</h3>
 
