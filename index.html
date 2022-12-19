@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+	<title>ClickIT</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<meta charset="utf-8">	
+</head>
+<body>
+
+	<header class="content">
+		<h1><A href="">ClickIT.LT</a></h1>
+		<ul>
+			<li class="menu-btn" id="game">Game</li>
+			<li class="menu-btn" id="contacts">Contacts</li>
+			<li class="menu-btn" id="donate">Donate</li>
+			<li class="menu-btn" id="updates">Updates</li>
+		</ul>
+	</header>
+	
+	<section class="main-block content">
+		
+		<section class="main-content" id="game-content">
+
+			<section id="modal-section"></section>
+
+			<section id="game-content-header">
+
+				<p><span class="game-icon diamond-icon"></span> Money: <span class="s-color" id="money-text">0$</span></p>
+				<Br>
+
+				<p>Hacked: <span class="s-color" id="hacked-text">0</span></p>
+				<p>Hack progress: 
+					<span class="s-color" id="hack-progress-text">0%</span>
+					<section class="progress-bar"><section class="progress-bar progress-bar-top" id="hack-progress-bar"></section></section>
+				</p>
+
+				<br>
+
+				<p>Level: <span class="s-color" id="lvl-text">1 lvl</span></p>
+				<p>XP: <span class="s-color" id="xp-text">0</span>/<span class="s-color" id="max-xp-text">100</span></p>
+				<section class="progress-bar"><section class="progress-bar progress-bar-top" id="xp-progress-bar"></section></section> 
+				<br>
+
+				<p>Money/attempt to hack: <span class="s-color" id="money-skill-text">1$</span></p>
+				<p>Hack skill: <span class="s-color" id="hack-skill-text">1</span></p>
+				<p>Money bot skill (per second): <span class="s-color" id="money-bot-skill-text">1</span></p>
+				<p>Hack bot skill (per second): <span class="s-color" id="hack-bot-skill-text">1</span></p>
+			</section>
+
+			<img id="hack-btn" src="images/computer.png" alt="computer">
+
+			<p id="succes-msg"></p>
+			<p id="error-msg"></p>
+
+			<ul id="game-content-bottom-menu">
+				<li id="upgrades-btn" class="game-content-bottom-menu-active"><img class="game-content-bottom-menu-logo" src="images/upgrades.png" alt="upgrades-logo"> Upgrades</li>
+				<li id="achievments-btn"><img class="game-content-bottom-menu-logo" src="images/achivement.png" alt="achievments-logo"> Achievments</li>
+				<li id="hacker-groups-btn"><img class="game-content-bottom-menu-logo" src="images/hacker-groups.png" alt="hacker-groups-logo"> Hacker Groups</li>
+			</ul>
+
+			<section id="upgrades" class="row">
+				<Section class="buy-smth-list">
+					<h2>More money on click</h2>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">100</span> $</p>
+						<p class="s-color">+1 <span class="game-icon diamond-icon"></span>/click</p>
+						<div id="money-per-click-1" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">2000</span> $</p>
+						<p class="s-color">+5 <span class="game-icon diamond-icon"></span>/click</p>
+						<div id="money-per-click-2" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">6000</span> $</p>
+						<p class="s-color">+15 <span class="game-icon diamond-icon"></span>/click</p>
+						<div id="money-per-click-3" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">30000</span> $</p>
+						<p class="s-color">+40 <span class="game-icon diamond-icon"></span>/click</p>
+						<div id="money-per-click-4" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">100000</span> $</p>
+						<p class="s-color">+80 <span class="game-icon diamond-icon"></span>/click</p>
+						<div id="money-per-click-5" class="buy-btn">buy</div>
+					</section>
+				</Section>
+
+				<Section class="buy-smth-list">
+					<h2>Better hacking skills</h2>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">100</span> $</p>
+						<p class="s-color">+1/click</p>
+						<div id="hack-per-click-1" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">2000</span> $</p>
+						<p class="s-color">+5/click</p>
+						<div id="hack-per-click-2" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">6000</span> $</p>
+						<p class="s-color">+15/click</p>
+						<div id="hack-per-click-3" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">30000</span> $</p>
+						<p class="s-color">+40/click</p>
+						<div id="hack-per-click-4" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">100000</span> $</p>
+						<p class="s-color">+80/click</p>
+						<div id="hack-per-click-5" class="buy-btn">buy</div>
+					</section>
+				</Section>
+
+				<Section class="buy-smth-list">
+					<h2>More money per second</h2>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">400</span> $</p>
+						<p class="s-color">+1 <span class="game-icon diamond-icon"></span>/second</p>
+						<div id="money-per-second-1" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">6000</span> $</p>
+						<p class="s-color">+5 <span class="game-icon diamond-icon"></span>/second</p>
+						<div id="money-per-second-2" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">24000</span> $</p>
+						<p class="s-color">+15 <span class="game-icon diamond-icon"></span>/second</p>
+						<div id="money-per-second-3" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">90000</span> $</p>
+						<p class="s-color">+40 <span class="game-icon diamond-icon"></span>/second</p>
+						<div id="money-per-second-4" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">250000</span> $</p>
+						<p class="s-color">+80 <span class="game-icon diamond-icon"></span>/second</p>
+						<div id="money-per-second-5" class="buy-btn">buy</div>
+					</section>
+				</Section>
+
+				<Section class="buy-smth-list">
+					<h2>More hacking per second</h2>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">400</span> $</p>
+						<p class="s-color">+1/second</p>
+						<div id="hack-per-second-1" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">6000</span> $</p>
+						<p class="s-color">+5/second</p>
+						<div id="hack-per-second-2" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">24000</span> $</p>
+						<p class="s-color">+15/second</p>
+						<div id="hack-per-second-3" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">90000</span> $</p>
+						<p class="s-color">+40/second</p>
+						<div id="hack-per-second-4" class="buy-btn">buy</div>
+					</section>
+					<section class="buy-smth-block">
+						<img src="images/hack_image.jpg" alt="">
+						<p>Price: <span class="s-color">250000</span> $</p>
+						<p class="s-color">+80/second</p>
+						<div id="hack-per-second-5" class="buy-btn">buy</div>
+					</section>
+				</Section>
+			</section>
+
+			<section id="achievments">
+				<h2>ACHIEVMENTS</h2>
+				<Section id="achievments-list" class="buy-smth-list">
+					Error loading data
+				</Section>
+			</section>
+
+			<section id="hacker-groups">
+				<h2>HACKER GROUPS</h2>
+				<p id="your-group"></p>
+				<section id="hacker-groups-list" class="buy-smth-list">
+					Error loading data
+				</section>
+			</section>
+
+
+		</section>
+
+		<section class="main-content" id="contacts-content">
+			You can contact me via e-mail <strong>xxx@gmail.com</strong> or <br>
+			skype: <strong>xxxxxx</strong> .
+		</section>
+
+		<section class="main-content" id="updates-content">
+			<h1>#2</h1>
+			<ul>
+				<li>Pridėtos ikonos į žaidimo meniu.</li>
+				<li>Pridėtos ikonos į achievmentų puslapį.</li>
+				<li>Sukūrta apsauga nuo auto-clickerio (jau šiek tiek ankščiau įkelta)</li>
+				<li>Sukūrta hacker grups sistema, pasiekus tam tikrą lygį galėsite prisijungti vis prie kitos grupės.</li>
+				<li>Dabar kairiajame krašte taip pat rodys pranešimus.</li>
+			</ul>
+
+			<h1>#1</h1>
+			<ul>
+				<li>Sukūrta pasiekimų sistema, su galimybė labai lengvai pridėti naujų pasiekimų.</li>
+				<li>Sutvarkyta klaida, kai surinkus kažkiek pinigų jie pasidarydavo NaN.</li>
+				<li>Pridėtas icon pinigams.</li>
+			</ul>
+		</section>
+
+		<section class="main-content" id="donate-content">
+			<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=arnoldautuch4@gmail.com&lc=US&item_name=DONATION+to+CLICKIT+game&no_note=0&cn=&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted" target="_blank"><img src="images/paypal.png" alt="donate-to-paypal"></a>
+		</section>
+
+	</section>
+
+	<footer class="content">
+		<h3>All Rights Reserved @ 2018</h3>
+		<h2>By <a href="skype:arnold.autuch">Inn_Progress</a></h2> 
+		<a href="facebook.com/" class="fa fa-facebook"></a>
+		<a href="skype:arnold.autuch" class="fa fa-skype"></a>
+		<a href="google.com/" class="fa fa-google"></a>
+	</footer>
+
+
+
+	
+	<script type="text/javascript" src="script.js"></script>
+
+	<script language="javascript" type="text/javascript">
+		<!--
+		var _hey_lt_w = "", _hey_lt_h = "", _hey_lt_c = "";
+		//-->
+	</script>
+	<script language="javascript1.2" type="text/javascript">
+		<!--
+		_hey_lt_w = screen.width; _hey_lt_h = screen.height; _hey_lt_c = navigator.appName.indexOf("Microsoft") >= 0 ? screen.colorDepth : screen.pixelDepth;
+		//-->
+		</script>
+	<script language="javascript" type="text/javascript">
+		<!--
+		document.write("<a id='skaitliukas' target='_blank' href='http://www.hey.lt/details.php?id=clickitgame'><img width='88' height='31' border='0' src='http://www.hey.lt/count.php?id=clickitgame&width=" + _hey_lt_w + "&height=" + _hey_lt_h + "&color=" + _hey_lt_c + "&referer=" + escape(document.referrer) + "' alt='Hey.lt - Nemokamas lankytojų skaitliukas'><\/a>");
+		//-->
+	</script>
+	<noscript>
+		<a target="_blank" href="http://www.hey.lt/details.php?id=clickitgame"><img width="88" height="31" border="0" src="http://www.hey.lt/count.php?id=clickitgame" alt="Hey.lt - Nemokamas lankytojų skaitliukas"></a>
+	</noscript>
+
+</body>
+</html>
